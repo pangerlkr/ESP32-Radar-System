@@ -1,11 +1,24 @@
-# Pin Mapping Reference
+# ESP32 Pin Mapping Reference
 
-| Component | ESP32 GPIO |
-|---------|------------|
-| Ultrasonic TRIG | GPIO 5 |
-| Ultrasonic ECHO | GPIO 18 |
-| Servo Signal | GPIO 13 |
+## Ultrasonic Sensor (HC-SR04)
 
-## Notes
-- Do NOT power servo from ESP32 5V pin
-- Use external 5V supply with common ground
+| Signal | ESP32 GPIO |
+|------|-----------|
+| TRIG | GPIO 5 |
+| ECHO | GPIO 18 |
+| VCC  | 5V (external recommended) |
+| GND  | GND |
+
+## Servo Motor (SG90 / MG90)
+
+| Signal | ESP32 GPIO |
+|-------|-----------|
+| Signal | GPIO 13 |
+| Power  | External 5V |
+| Ground | Common GND |
+
+## Critical Notes
+
+- DO NOT power servo directly from ESP32 5V pin
+- Always share ground between ESP32 and external power
+- Avoid ESP32 boot pins (GPIO 0, 2, 15)
