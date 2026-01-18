@@ -1,22 +1,31 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-// -------- Hardware Configuration --------
+// =====================
+// Hardware Configuration
+// =====================
 #define TRIG_PIN 5
 #define ECHO_PIN 18
 #define SERVO_PIN 13
 
-// -------- Radar Parameters --------
-#define SCAN_MIN_ANGLE 15
-#define SCAN_MAX_ANGLE 165
-#define SCAN_STEP 2
-#define SERVO_DELAY_MS 20
+// =====================
+// Radar Parameters
+// =====================
+#define MAX_DISTANCE_CM 200
+#define SERVO_MIN_ANGLE 0
+#define SERVO_MAX_ANGLE 180
+#define SERVO_STEP 1
 
-// -------- Distance Filtering --------
-#define FILTER_WINDOW_SIZE 5
+// =====================
+// WiFi Configuration
+// =====================
+#define WIFI_SSID "YOUR_WIFI_NAME"
+#define WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
 
-// -------- WiFi Configuration --------
-#define WIFI_SSID "ESP32-Radar"
-#define WIFI_PASSWORD "12345678"
+// =====================
+// Debug Configuration
+// =====================
+#define ENABLE_SERIAL_DEBUG true
+#define SERIAL_BAUDRATE 115200
 
 #endif
